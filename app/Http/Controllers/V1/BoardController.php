@@ -6,8 +6,9 @@ use App\Models\Board;
 use App\Http\Requests\StoreBoardRequest;
 use App\Http\Requests\UpdateBoardRequest;
 use App\Http\Resources\V1\BoardResource;
+use App\Http\Controllers\Controller;
 
-class BoardController extends \App\Http\Controllers\Controller
+class BoardController extends Controller
 {
     /**
      * Display a listing of the resource.
