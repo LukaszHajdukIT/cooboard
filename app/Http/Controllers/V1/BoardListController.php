@@ -7,7 +7,6 @@ use App\Http\Requests\StoreBoardListRequest;
 use App\Http\Requests\UpdateBoardListRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\{BoardListResource, BoardResource};
-use Illuminate\Http\Request;
 
 class BoardListController extends Controller
 {
@@ -46,7 +45,7 @@ class BoardListController extends Controller
      */
     public function show(Board $board, BoardList $list)
     {
-        return new BoardResource($list);
+        return BoardResource::collection($list->where);
     }
 
     /**
